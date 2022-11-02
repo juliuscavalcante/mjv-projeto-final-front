@@ -28,11 +28,11 @@ import { MatCardModule } from '@angular/material/card';
 import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
-import { DriverListComponent } from './components/driver-list/driver-list.component';
+import { DriverListComponent } from './components/driver/driver-list/driver-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from "ngx-toastr";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
-import { DriverCreateComponent } from './components/driver-create/driver-create.component';
+import { DriverCreateComponent } from './components/driver/driver-create/driver-create.component';
 
 @NgModule({
   declarations: [

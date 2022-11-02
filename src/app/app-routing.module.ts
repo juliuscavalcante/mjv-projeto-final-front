@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NavComponent } from "./components/nav/nav.component";
 import { HomeComponent } from "./components/home/home.component";
-import { DriverListComponent } from "./components/driver-list/driver-list.component";
+import { DriverListComponent } from "./components/driver/driver-list/driver-list.component";
 import { LoginComponent } from "./components/login/login.component";
 import { AuthGuard } from "./auth/auth.guard";
-import { DriverCreateComponent } from "./components/driver-create/driver-create.component";
+import { DriverCreateComponent } from "./components/driver/driver-create/driver-create.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

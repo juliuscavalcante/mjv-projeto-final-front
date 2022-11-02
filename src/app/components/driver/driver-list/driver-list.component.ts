@@ -1,8 +1,8 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { Driver} from "../../model/driver";
+import { Driver} from "../../../model/driver";
 import { MatTableDataSource } from "@angular/material/table";
 import { MatPaginator } from "@angular/material/paginator";
-import { DriverService } from "../../service/driver.service";
+import { DriverService } from "../../../service/driver.service";
 
 @Component({
   selector: 'app-driver-list',
