@@ -32,6 +32,7 @@ import { DriverListComponent } from './components/driver-list/driver-list.compon
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from "ngx-toastr";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
+import { DriverCreateComponent } from './components/driver-create/driver-create.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
     HeaderComponent,
     DriverListComponent,
     LoginComponent,
+    DriverCreateComponent,
   ],
   imports: [
     BrowserModule,
