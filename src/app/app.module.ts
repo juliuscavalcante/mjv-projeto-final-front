@@ -35,6 +35,7 @@ import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 import { DriverCreateComponent } from './components/driver/driver-create/driver-create.component';
 import { NgxMaskModule } from "ngx-mask";
 import { DriverUpdateComponent } from './components/driver/driver-update/driver-update.component';
+import { DriverDeleteComponent } from './components/driver/driver-delete/driver-delete.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { DriverUpdateComponent } from './components/driver/driver-update/driver-
     LoginComponent,
     DriverCreateComponent,
     DriverUpdateComponent,
+    DriverDeleteComponent,
   ],
   imports: [
     BrowserModule,
