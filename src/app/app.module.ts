@@ -30,7 +30,8 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DriverListComponent } from './components/driver-list/driver-list.component';
 import { LoginComponent } from './components/login/login.component';
-import {ToastrModule} from "ngx-toastr";
+import { ToastrModule } from "ngx-toastr";
+import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 
 @NgModule({
   declarations: [
@@ -71,7 +72,7 @@ import {ToastrModule} from "ngx-toastr";
       progressBar: true
     })
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
