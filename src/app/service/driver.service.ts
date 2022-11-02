@@ -14,4 +14,9 @@ export class DriverService {
   findAll(): Observable<Driver[]> {
     return this.http.get<Driver[]>(`${API_CONFIG.baseUrl}/driver`);
   }
+
+  create(driver : Driver): Observable<Driver[]> {
+    return this.http.post<Driver[]>(`${API_CONFIG.baseUrl}/driver`, driver);
+  }
+
 }
