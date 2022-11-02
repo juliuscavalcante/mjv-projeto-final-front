@@ -5,6 +5,7 @@ import { HomeComponent } from "./components/home/home.component";
 import { DriverListComponent } from "./components/driver-list/driver-list.component";
 import { LoginComponent } from "./components/login/login.component";
 import { AuthGuard } from "./auth/auth.guard";
+import { DriverCreateComponent } from "./components/driver-create/driver-create.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -12,7 +13,8 @@ const routes: Routes = [
   {
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
-      { path: 'driver', component: DriverListComponent }
+      { path: 'driver', component: DriverListComponent },
+      { path: 'driver/create', component: DriverCreateComponent }
     ]
   }
 ];
