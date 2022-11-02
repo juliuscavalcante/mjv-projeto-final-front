@@ -29,6 +29,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DriverListComponent } from './components/driver-list/driver-list.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DriverListComponent } from './components/driver-list/driver-list.compon
     HomeComponent,
     HeaderComponent,
     DriverListComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
