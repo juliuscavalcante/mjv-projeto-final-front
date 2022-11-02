@@ -7,6 +7,7 @@ import { LoginComponent } from "./components/login/login.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { DriverCreateComponent } from "./components/driver/driver-create/driver-create.component";
 import { DriverUpdateComponent } from "./components/driver/driver-update/driver-update.component";
+import { DriverDeleteComponent } from "./components/driver/driver-delete/driver-delete.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'driver', component: DriverListComponent },
       { path: 'driver/create', component: DriverCreateComponent },
       { path: 'driver/update/:id', component: DriverUpdateComponent },
+      { path: 'driver/delete/:id', component: DriverDeleteComponent },
     ]
   }
 ];
