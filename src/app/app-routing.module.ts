@@ -6,6 +6,7 @@ import { DriverListComponent } from "./components/driver/driver-list/driver-list
 import { LoginComponent } from "./components/login/login.component";
 import { AuthGuard } from "./auth/auth.guard";
 import { DriverCreateComponent } from "./components/driver/driver-create/driver-create.component";
+import { DriverUpdateComponent } from "./components/driver/driver-update/driver-update.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
     path: '', component: NavComponent, canActivate: [AuthGuard], children: [
       { path: 'home', component: HomeComponent },
       { path: 'driver', component: DriverListComponent },
-      { path: 'driver/create', component: DriverCreateComponent }
+      { path: 'driver/create', component: DriverCreateComponent },
+      { path: 'driver/update/:id', component: DriverUpdateComponent },
     ]
   }
 ];

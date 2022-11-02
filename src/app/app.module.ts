@@ -34,6 +34,7 @@ import { ToastrModule } from "ngx-toastr";
 import { AuthInterceptorProvider } from "./interceptors/auth.interceptor";
 import { DriverCreateComponent } from './components/driver/driver-create/driver-create.component';
 import { NgxMaskModule } from "ngx-mask";
+import { DriverUpdateComponent } from './components/driver/driver-update/driver-update.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { NgxMaskModule } from "ngx-mask";
     DriverListComponent,
     LoginComponent,
     DriverCreateComponent,
+    DriverUpdateComponent,
   ],
   imports: [
     BrowserModule,

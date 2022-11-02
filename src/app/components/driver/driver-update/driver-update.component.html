@@ -1,7 +1,7 @@
 <div class="container mat-elevation-z8">
     <form class="form">
-        <h1 class="fullWidth">Register Driver</h1>
-        <img class="fullWidth" src="assets/img/icon-helmet.svg" alt="Driver helmet">
+        <h1 class="fullWidth">Update Driver</h1>
+        <img class="fullWidth" src="assets/img/icon-gloves.svg" alt="Driver gloves">
 
         <mat-form-field class="fullWidth"  appearance="legacy">
             <mat-label>Name</mat-label>
@@ -20,12 +20,12 @@
             <mat-label>CPF</mat-label>
             <input
                     [(ngModel)]="driver.cpf"
-                   name="cpf"
-                   [formControl]="cpf"
-                   required
-                   matInput
-                   placeholder="000.000.000-00"
-                   mask="000.000.000-00">
+                    name="cpf"
+                    [formControl]="cpf"
+                    required
+                    matInput
+                    placeholder="000.000.000-00"
+                    mask="000.000.000-00">
             <mat-icon matSuffix>pin</mat-icon>
         </mat-form-field>
 
@@ -33,24 +33,24 @@
             <mat-label>E-mail</mat-label>
             <input
                     [(ngModel)]="driver.email"
-                   name="email"
-                   [formControl]="email"
-                   required
-                   matInput
-                   placeholder="joão@email.com">
+                    name="email"
+                    [formControl]="email"
+                    required
+                    matInput
+                    placeholder="joão@email.com">
             <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
         <mat-form-field class="fullWidth"  appearance="legacy">
             <mat-label>Password</mat-label>
             <input
-                   [(ngModel)]="driver.password"
-                   name="password"
-                   [formControl]="password"
-                   required
-                   type="password"
-                   matInput
-                   placeholder="@Password123">
+                    [(ngModel)]="driver.password"
+                    name="password"
+                    [formControl]="password"
+                    required
+                    type="password"
+                    matInput
+                    placeholder="@Password123">
             <mat-icon matSuffix>lock</mat-icon>
         </mat-form-field>
 
@@ -67,9 +67,9 @@
             <mat-icon matSuffix>date_range</mat-icon>
         </mat-form-field>
 
-        <button (click)="addProfile(1);create()" [disabled]="!fieldValidation()" class="fullWidth mat-elevation-z4"
-                color="primary" mat-flat-button>Register</button>
-        <button routerLink="../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
+        <button (click)="update()" [disabled]="!fieldValidation()" class="fullWidth mat-elevation-z4"
+                color="primary" mat-flat-button>Update</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
     </form>
 
     <p class="fullWidth">Developed by Julius Cavalcante</p>
