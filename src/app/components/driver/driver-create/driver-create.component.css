@@ -18,10 +18,12 @@ img {
     margin: auto;
 }
 
-.section {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{
+    visibility: hidden !important;
 }
 
 button {
@@ -31,4 +33,8 @@ button {
 p {
     margin-top: 1rem;
     opacity: .5;
+}
+
+mat-icon {
+    opacity: .8;
 }
