@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Credentials } from 'src/app/model/credentials';
 import { FormControl, Validators } from "@angular/forms";
-import {ToastrService} from "ngx-toastr";
+import { ToastrService } from "ngx-toastr";
+import { AuthService } from "../../services/auth.service";
+import { Router } from "@angular/router";
+
 
 @Component({
   selector: 'app-login',
@@ -19,21 +22,24 @@ export class LoginComponent implements OnInit {
   password = new FormControl(null, Validators.minLength(3));
 
 
-  constructor(private toast: ToastrService) { }
+  constructor(
+      private toast: ToastrService,
+      private service: AuthService,
+      private router: Router){ }
 
   ngOnInit(): void {
   }
 
   login() {
-    this.toast.error('The email or password is incorrect', 'Login');
-    this.credentials.password = '';
+    this.service.authenticate(this.credentials).subscribe(answer => {
+      this.service.successfulLogin(answer.headers.get('Authorization').substring(7));
+      this.router.navigate([''])
+    }, () => {
+      this.toast.error('The email or password is incorrect', 'Login');
+    })
   }
 
   fieldValidation(): boolean {
-    if (this.email.valid && this.password.valid) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.email.valid && this.password.valid;
   }
 }
