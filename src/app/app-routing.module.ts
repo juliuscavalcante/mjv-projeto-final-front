@@ -48,7 +48,7 @@ const routes: Routes = [
       { path: 'manager/update/:id', component: ManagerUpdateComponent },
       { path: 'manager/delete/:id', component: ManagerDeleteComponent },
 
-      { path: 'request', component: RequestListComponent },
+      { path: 'requests', component: RequestListComponent },
     ]
   }
 ];
