@@ -20,6 +20,7 @@ import { ManagerListComponent } from "./components/manager/manager-list/manager-
 import { ManagerCreateComponent } from "./components/manager/manager-create/manager-create.component";
 import { ManagerUpdateComponent } from "./components/manager/manager-update/manager-update.component";
 import { ManagerDeleteComponent } from "./components/manager/manager-delete/manager-delete.component";
+import { RequestListComponent } from "./components/request/request-list/request-list.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -46,6 +47,8 @@ const routes: Routes = [
       { path: 'manager/create', component: ManagerCreateComponent },
       { path: 'manager/update/:id', component: ManagerUpdateComponent },
       { path: 'manager/delete/:id', component: ManagerDeleteComponent },
+
+      { path: 'request', component: RequestListComponent },
     ]
   }
 ];
