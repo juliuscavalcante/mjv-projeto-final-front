@@ -1,0 +1,40 @@
+.container {
+    width: 35rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: .6rem;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+h1 , p {
+    text-align: center;
+}
+
+img {
+    height: 10rem;
+    margin: auto;
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder{
+    visibility: hidden !important;
+}
+
+button {
+    margin-top: .8rem;
+}
+
+p {
+    margin-top: 1rem;
+    opacity: .5;
+}
+
+mat-icon {
+    opacity: .8;
+}
