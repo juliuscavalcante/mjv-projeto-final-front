@@ -36,6 +36,10 @@ import { DriverCreateComponent } from './components/driver/driver-create/driver-
 import { NgxMaskModule } from "ngx-mask";
 import { DriverUpdateComponent } from './components/driver/driver-update/driver-update.component';
 import { DriverDeleteComponent } from './components/driver/driver-delete/driver-delete.component';
+import { EngineerListComponent } from "./components/engineer/engineer-list/engineer-list.component";
+import { EngineerCreateComponent } from "./components/engineer/engineer-create/engineer-create.component";
+import { EngineerUpdateComponent } from "./components/engineer/engineer-update/engineer-update.component";
+import { EngineerDeleteComponent } from "./components/engineer/engineer-delete/engineer-delete.component";
 
 @NgModule({
   declarations: [
@@ -48,6 +52,10 @@ import { DriverDeleteComponent } from './components/driver/driver-delete/driver-
     DriverCreateComponent,
     DriverUpdateComponent,
     DriverDeleteComponent,
+    EngineerListComponent,
+    EngineerCreateComponent,
+    EngineerUpdateComponent,
+    EngineerDeleteComponent,
   ],
   imports: [
     BrowserModule,

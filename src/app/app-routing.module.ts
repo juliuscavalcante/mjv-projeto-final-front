@@ -8,6 +8,10 @@ import { AuthGuard } from "./auth/auth.guard";
 import { DriverCreateComponent } from "./components/driver/driver-create/driver-create.component";
 import { DriverUpdateComponent } from "./components/driver/driver-update/driver-update.component";
 import { DriverDeleteComponent } from "./components/driver/driver-delete/driver-delete.component";
+import { EngineerListComponent } from "./components/engineer/engineer-list/engineer-list.component";
+import { EngineerCreateComponent } from "./components/engineer/engineer-create/engineer-create.component";
+import { EngineerUpdateComponent } from "./components/engineer/engineer-update/engineer-update.component";
+import { EngineerDeleteComponent } from "./components/engineer/engineer-delete/engineer-delete.component";
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -19,6 +23,11 @@ const routes: Routes = [
       { path: 'driver/create', component: DriverCreateComponent },
       { path: 'driver/update/:id', component: DriverUpdateComponent },
       { path: 'driver/delete/:id', component: DriverDeleteComponent },
+
+      { path: 'engineer', component: EngineerListComponent },
+      { path: 'engineer/create', component: EngineerCreateComponent },
+      { path: 'engineer/update/:id', component: EngineerUpdateComponent },
+      { path: 'engineer/delete/:id', component: EngineerDeleteComponent },
     ]
   }
 ];
