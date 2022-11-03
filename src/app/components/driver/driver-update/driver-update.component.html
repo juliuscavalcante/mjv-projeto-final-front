@@ -67,7 +67,7 @@
             <mat-icon matSuffix>date_range</mat-icon>
         </mat-form-field>
 
-        <button (click)="update()" [disabled]="!fieldValidation()" class="fullWidth mat-elevation-z4"
+        <button (click)="addProfile(1);update()" [disabled]="!fieldValidation()" class="fullWidth mat-elevation-z4"
                 color="primary" mat-flat-button>Update</button>
         <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
     </form>
