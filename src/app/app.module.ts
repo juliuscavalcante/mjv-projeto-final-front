@@ -44,6 +44,10 @@ import { MechanicListComponent } from "./components/mechanic/mechanic-list/mecha
 import { MechanicCreateComponent } from "./components/mechanic/mechanic-create/mechanic-create.component";
 import { MechanicUpdateComponent } from "./components/mechanic/mechanic-update/mechanic-update.component";
 import { MechanicDeleteComponent } from "./components/mechanic/mechanic-delete/mechanic-delete.component";
+import { ManagerListComponent } from "./components/manager/manager-list/manager-list.component";
+import { ManagerCreateComponent } from "./components/manager/manager-create/manager-create.component";
+import { ManagerUpdateComponent } from "./components/manager/manager-update/manager-update.component";
+import { ManagerDeleteComponent } from "./components/manager/manager-delete/manager-delete.component";
 
 @NgModule({
   declarations: [
@@ -64,6 +68,10 @@ import { MechanicDeleteComponent } from "./components/mechanic/mechanic-delete/m
     MechanicCreateComponent,
     MechanicUpdateComponent,
     MechanicDeleteComponent,
+    ManagerListComponent,
+    ManagerCreateComponent,
+    ManagerUpdateComponent,
+    ManagerDeleteComponent,
   ],
   imports: [
     BrowserModule,
