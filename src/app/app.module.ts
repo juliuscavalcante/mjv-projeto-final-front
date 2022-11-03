@@ -50,6 +50,7 @@ import { ManagerUpdateComponent } from "./components/manager/manager-update/mana
 import { ManagerDeleteComponent } from "./components/manager/manager-delete/manager-delete.component";
 import { RequestListComponent } from './components/request/request-list/request-list.component';
 import { RequestCreateComponent } from './components/request/request-create/request-create.component';
+import { RequestUpdateComponent } from './components/request/request-update/request-update.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { RequestCreateComponent } from './components/request/request-create/requ
     ManagerDeleteComponent,
     RequestListComponent,
     RequestCreateComponent,
+    RequestUpdateComponent,
   ],
   imports: [
     BrowserModule,
