@@ -7,7 +7,7 @@ import { RequestService } from "../../../service/request.service";
 import { MechanicService } from "../../../service/mechanic.service";
 import { EngineerService } from "../../../service/engineer.service";
 import { ToastrService } from "ngx-toastr";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-request-update',
@@ -43,17 +43,28 @@ export class RequestUpdateComponent implements OnInit {
       private engineerService: EngineerService,
       private toastService: ToastrService,
       private router: Router,
+      private route: ActivatedRoute,
+
   ) { }
 
 
   ngOnInit(): void {
+    this.request.id = this.route.snapshot.paramMap.get('id');
     this.findAllCustomers();
     this.findAllTechnician();
   }
 
-  create(): void {
+  findById(): void {
+    this.requestService.findById(this.request.id).subscribe(request => {
+      this.request = request;
+    }, ex => {
+      this.toastService.error(ex.error.error);
+    })
+  }
+
+  update(): void {
     this.requestService.create(this.request).subscribe(request => {
-      this.toastService.success('Request created successfully', 'New Request');
+      this.toastService.success('Request upated successfully', 'Upate Request');
       this.router.navigate(['requests']);
     }, ex => {
       this.toastService.error(ex.error.error);
@@ -80,4 +91,25 @@ export class RequestUpdateComponent implements OnInit {
         this.engineer.valid &&
         this.mechanic.valid
   }
+
+  returnStatus(status: any): string {
+    if (status == '0') {
+      return 'OPEN'
+    } else if  (status == '1') {
+      return 'PROGRESS'
+    } else {
+      return 'CLOSED'
+    }
+  }
+
+  returnPriority(priority: any): string {
+    if (priority == '0') {
+      return 'LOW'
+    } else if  (priority == '1') {
+      return 'MEDIUM'
+    } else {
+      return 'HIGH'
+    }
+  }
 }
+
