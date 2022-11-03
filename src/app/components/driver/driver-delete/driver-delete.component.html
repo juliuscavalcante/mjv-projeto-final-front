@@ -1,1 +1,64 @@
-<p>driver-delete works!</p>
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Delete Driver</h1>
+        <img class="fullWidth" src="assets/img/icon-wheel.svg" alt="f1 wheel">
+
+        <mat-form-field class="fullWidth"  appearance="legacy">
+            <mat-label>Name</mat-label>
+            <input
+                    [(ngModel)]="driver.name"
+                    name="name"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>CPF</mat-label>
+            <input
+                    [(ngModel)]="driver.cpf"
+                    name="cpf"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>pin</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth"  appearance="legacy">
+            <mat-label>E-mail</mat-label>
+            <input
+                    [(ngModel)]="driver.email"
+                    name="email"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth"  appearance="legacy">
+            <mat-label>Password</mat-label>
+            <input
+                    [(ngModel)]="driver.password"
+                    name="password"
+                    type="password"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth" appearance="legacy">
+            <mat-label>Birth Date</mat-label>
+            <input
+                    [(ngModel)]="driver.birthDate"
+                    name="birthDate"
+                    type="text"
+                    [disabled]="true"
+                    matInput >
+            <mat-icon matSuffix>date_range</mat-icon>
+        </mat-form-field>
+
+        <button (click)="delete()" class="fullWidth mat-elevation-z4"
+                color="warn" mat-flat-button>Delete</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
+    </form>
+
+    <p class="fullWidth">Developed by Julius Cavalcante</p>
+</div>

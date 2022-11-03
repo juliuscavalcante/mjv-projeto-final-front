@@ -27,4 +27,8 @@ export class DriverService {
     return this.http.put<Driver>(`${API_CONFIG.baseUrl}/driver/${driver.id}`, driver);
   }
 
+  delete(id: any): Observable<Driver> {
+    return this.http.delete<Driver>(`${API_CONFIG.baseUrl}/driver/${id}`);
+  }
+
 }
