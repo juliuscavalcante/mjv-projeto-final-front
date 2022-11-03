@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Link do Projeto:
 
-https://mjv-projeto-final-front.vercel.app/login
+https://mjv-racing.vercel.app/login
 
 <p>Usuário para acesso à aplicação:<br> 
 email: rita@email.com<br> 
