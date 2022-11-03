@@ -51,6 +51,7 @@ const routes: Routes = [
 
       { path: 'requests', component: RequestListComponent },
       { path: 'requests/create', component: RequestCreateComponent },
+      { path: 'requests/update/:id', component: RequestCreateComponent },
     ]
   }
 ];
