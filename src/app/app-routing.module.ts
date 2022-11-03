@@ -12,6 +12,14 @@ import { EngineerListComponent } from "./components/engineer/engineer-list/engin
 import { EngineerCreateComponent } from "./components/engineer/engineer-create/engineer-create.component";
 import { EngineerUpdateComponent } from "./components/engineer/engineer-update/engineer-update.component";
 import { EngineerDeleteComponent } from "./components/engineer/engineer-delete/engineer-delete.component";
+import { MechanicListComponent } from "./components/mechanic/mechanic-list/mechanic-list.component";
+import { MechanicCreateComponent } from "./components/mechanic/mechanic-create/mechanic-create.component";
+import { MechanicUpdateComponent } from "./components/mechanic/mechanic-update/mechanic-update.component";
+import { MechanicDeleteComponent } from "./components/mechanic/mechanic-delete/mechanic-delete.component";
+
+function MechanicrDeleteComponent() {
+
+}
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -28,6 +36,11 @@ const routes: Routes = [
       { path: 'engineer/create', component: EngineerCreateComponent },
       { path: 'engineer/update/:id', component: EngineerUpdateComponent },
       { path: 'engineer/delete/:id', component: EngineerDeleteComponent },
+
+      { path: 'mechanic', component: MechanicListComponent },
+      { path: 'mechanic/create', component: MechanicCreateComponent },
+      { path: 'mechanic/update/:id', component: MechanicUpdateComponent },
+      { path: 'mechanic/delete/:id', component: MechanicDeleteComponent },
     ]
   }
 ];

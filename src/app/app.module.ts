@@ -40,6 +40,10 @@ import { EngineerListComponent } from "./components/engineer/engineer-list/engin
 import { EngineerCreateComponent } from "./components/engineer/engineer-create/engineer-create.component";
 import { EngineerUpdateComponent } from "./components/engineer/engineer-update/engineer-update.component";
 import { EngineerDeleteComponent } from "./components/engineer/engineer-delete/engineer-delete.component";
+import { MechanicListComponent } from "./components/mechanic/mechanic-list/mechanic-list.component";
+import { MechanicCreateComponent } from "./components/mechanic/mechanic-create/mechanic-create.component";
+import { MechanicUpdateComponent } from "./components/mechanic/mechanic-update/mechanic-update.component";
+import { MechanicDeleteComponent } from "./components/mechanic/mechanic-delete/mechanic-delete.component";
 
 @NgModule({
   declarations: [
@@ -56,6 +60,10 @@ import { EngineerDeleteComponent } from "./components/engineer/engineer-delete/e
     EngineerCreateComponent,
     EngineerUpdateComponent,
     EngineerDeleteComponent,
+    MechanicListComponent,
+    MechanicCreateComponent,
+    MechanicUpdateComponent,
+    MechanicDeleteComponent,
   ],
   imports: [
     BrowserModule,
