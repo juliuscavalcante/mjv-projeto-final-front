@@ -15,4 +15,8 @@ export class RequestService {
     findAll(): Observable<Request[]> {
         return this.http.get<Request[]>(`${API_CONFIG.baseUrl}/requests`);
     }
+
+    create(request: Request): Observable<Request> {
+        return this.http.post<Request>(`${API_CONFIG.baseUrl}/requests`, request);
+    }
 }

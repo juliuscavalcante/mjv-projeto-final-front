@@ -5,18 +5,24 @@
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Request Title</mat-label>
-            <input  [formControl]="title"
+            <input
+                    [(ngModel)]="request.title"
+                    name="title"
+                    [formControl]="title"
                     required
                     matInput
-                    placeholder="Ex. request description" >
+                    placeholder="Ex. request title" >
         </mat-form-field>
     </form>
 
     <div class="status-priority">
         <mat-form-field appearance="outline">
             <mat-label>Select Status</mat-label>
-            <mat-select  [formControl]="status"
-                         required>
+            <mat-select
+                    [(ngModel)]="request.status"
+                    name="status"
+                    [formControl]="status"
+                    required>
                 <mat-option value="0">OPEN</mat-option>
                 <mat-option value="1">PROGRESS</mat-option>
                 <mat-option value="2">CLOSED</mat-option>
@@ -25,8 +31,11 @@
 
         <mat-form-field appearance="outline">
             <mat-label>Select Priority</mat-label>
-            <mat-select  [formControl]="priority"
-                         required>
+            <mat-select
+                    [(ngModel)]="request.priority"
+                    name="priority"
+                    [formControl]="priority"
+                    required>
                 <mat-option value="0">LOW</mat-option>
                 <mat-option value="1">MEDIUM</mat-option>
                 <mat-option value="2">HIGH</mat-option>
@@ -37,9 +46,12 @@
     <div class="engineer">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Select Engineer</mat-label>
-            <mat-select  [formControl]="engineer"
-                         required >
-                <mat-option value="0">engineer</mat-option>
+            <mat-select
+                    [(ngModel)]="request.engineer"
+                    name="engineer"
+                    [formControl]="engineer"
+                    required>
+                <mat-option *ngFor="let eng of engineers" value="{{ eng.id }}">{{ eng.name }}</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
@@ -47,28 +59,31 @@
     <div class="mechanic">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>Select Mechanic</mat-label>
-            <mat-select  [formControl]="mechanic"
-                         required >
-                <mat-option value="0">mechanic</mat-option>
+            <mat-select
+                    [(ngModel)]="request.mechanic"
+                    name="mechanic"
+                    [formControl]="mechanic"
+                    required>
+                <mat-option *ngFor="let mec of mechanics" value="{{ mec.id }}">{{ mec.name }}</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
 
     <form class="form">
         <mat-form-field class="full-width" appearance="outline">
-            <mat-label>Description</mat-label>
+            <mat-label>Notes</mat-label>
             <textarea
-                    [formControl]="description"
+                    [formControl]="notes"
                     required
-                    class="description"
+                    class="notes"
                     matInput
                     placeholder="Ex. service notes"></textarea>
         </mat-form-field>
     </form>
 
-    <button [disabled]="!fieldValidation()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Create</button>
-    <button class="full-width mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
+    <button (click)="create()" [disabled]="!fieldValidation()" class="full-width mat-elevation-z4" mat-raised-button color="primary">Create</button>
+    <button routerLink="../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">Cancel</button>
 
-    <p class="full-width" >Developer by Julius Cavalcante</p>
+    <p class="full-width" >Developed by Julius Cavalcante</p>
 
 </div>
