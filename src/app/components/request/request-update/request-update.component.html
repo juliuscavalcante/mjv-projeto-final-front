@@ -3,7 +3,7 @@
     <img class="full-width" src="assets/img/icon-request-update.svg" alt="request-img">
 
     <form class="form">
-        <mat-form-field class="full-width" appearance="outline">
+        <mat-form-field class="full-width" appearance="legacy">
             <mat-label>Request Title</mat-label>
             <input
                     [(ngModel)]="request.title"
@@ -16,7 +16,7 @@
     </form>
 
     <div class="status-priority">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="legacy">
             <mat-label>STATUS ({{ returnStatus(request.status) }})</mat-label>
             <mat-select
                     [(ngModel)]="request.status"
@@ -44,7 +44,7 @@
     </div>
 
     <div class="engineer">
-        <mat-form-field class="full-width" appearance="outline">
+        <mat-form-field class="full-width" appearance="legacy">
             <mat-label>ENGINEER ({{ request.engineerName }})</mat-label>
             <mat-select
                     [(ngModel)]="request.engineer"
@@ -57,7 +57,7 @@
     </div>
 
     <div class="mechanic">
-        <mat-form-field class="full-width" appearance="outline">
+        <mat-form-field class="full-width" appearance="legacy">
             <mat-label>MECHANIC ({{ request.mechanicName }})</mat-label>
             <mat-select
                     [(ngModel)]="request.mechanic"
@@ -70,7 +70,7 @@
     </div>
 
     <form class="form">
-        <mat-form-field class="full-width" appearance="outline">
+        <mat-form-field class="full-width" appearance="legacy">
             <mat-label>Notes</mat-label>
             <textarea
                     [(ngModel)]="request.notes"

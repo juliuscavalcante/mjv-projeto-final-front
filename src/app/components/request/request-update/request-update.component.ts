@@ -50,8 +50,9 @@ export class RequestUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.request.id = this.route.snapshot.paramMap.get('id');
-    this.findAllCustomers();
-    this.findAllTechnician();
+    this.findById();
+    this.findAllMechanics();
+    this.findAllEngineers();
   }
 
   findById(): void {
@@ -63,21 +64,21 @@ export class RequestUpdateComponent implements OnInit {
   }
 
   update(): void {
-    this.requestService.create(this.request).subscribe(request => {
-      this.toastService.success('Request upated successfully', 'Upate Request');
+    this.requestService.update(this.request).subscribe(request => {
+      this.toastService.success('Request upated successfully', 'Update Request');
       this.router.navigate(['requests']);
     }, ex => {
       this.toastService.error(ex.error.error);
     })
   }
 
-  findAllCustomers(): void {
+  findAllMechanics(): void {
     this.mechanicService.findAll().subscribe(request => {
       this.mechanics = request;
     })
   }
 
-  findAllTechnician(): void {
+  findAllEngineers(): void {
     this.engineerService.findAll().subscribe(request => {
       this.engineers = request;
     })

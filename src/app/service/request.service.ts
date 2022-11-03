@@ -24,7 +24,7 @@ export class RequestService {
         return this.http.post<Request>(`${API_CONFIG.baseUrl}/requests`, request);
     }
 
-    upate(request: Request):Observable<Request> {
+    update(request: Request):Observable<Request> {
         return this.http.put<Request>(`${API_CONFIG.baseUrl}/requests/${request.id}`, request);
     }
 }
