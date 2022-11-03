@@ -1,3 +1,17 @@
+<img src="https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-yellow"/>
+
+# MJV Racing Team Management
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
+
+## Link do Projeto:
+
+https://mjv-projeto-final-front.vercel.app/login
+
+<p>Usuário para acesso à aplicação:<br> 
+email: rita@email.com<br> 
+password: 123</p>
+
 # MjvRacingFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.2.
