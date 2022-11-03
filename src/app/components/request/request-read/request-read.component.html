@@ -1,1 +1,83 @@
-<p>request-read works!</p>
+<div class="container mat-elevation-z8">
+    <h1 class="full-width">Read Request</h1>
+    <img class="full-width" src="assets/img/icon-request-read.svg" alt="read request">
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="legacy">
+            <mat-label>Request Title</mat-label>
+            <input
+                    [disabled]="true"
+                    [(ngModel)]="request.title"
+                    name="title"
+                    matInput>
+        </mat-form-field>
+    </form>
+
+    <div class="status-priority">
+        <mat-form-field appearance="legacy">
+            <mat-label>STATUS ({{ returnStatus(request.status) }})</mat-label>
+            <mat-select
+                    [disabled]="true"
+                    [(ngModel)]="request.status"
+                    name="status"
+                    required>
+                <mat-option value="0">OPEN</mat-option>
+                <mat-option value="1">PROGRESS</mat-option>
+                <mat-option value="2">CLOSED</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="legacy">
+            <mat-label>PRIORITY ({{ returnPriority(request.priority) }})</mat-label>
+            <mat-select
+                    [disabled]="true"
+                    [(ngModel)]="request.priority"
+                    name="priority">
+                <mat-option value="0">LOW</mat-option>
+                <mat-option value="1">MEDIUM</mat-option>
+                <mat-option value="2">HIGH</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="engineer">
+        <mat-form-field class="full-width" appearance="legacy">
+            <mat-label>ENGINEER ({{ request.engineerName }})</mat-label>
+            <mat-select
+                    [disabled]="true"
+                    [(ngModel)]="request.engineer"
+                    name="engineer">
+                <mat-option>{{ request.engineerName }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="mechanic">
+        <mat-form-field class="full-width" appearance="legacy">
+            <mat-label>MECHANIC ({{ request.mechanicName }})</mat-label>
+            <mat-select
+                    [disabled]="true"
+                    [(ngModel)]="request.mechanic"
+                    name="mechanic">
+                <mat-option>{{ request.mechanicName }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <form class="form">
+        <mat-form-field class="full-width" appearance="legacy">
+            <mat-label>Notes</mat-label>
+            <textarea
+                    [disabled]="true"
+                    [(ngModel)]="request.notes"
+                    name="notes"
+                    class="notes"
+                    matInput></textarea>
+        </mat-form-field>
+    </form>
+
+    <button routerLink="../../" class="full-width mat-elevation-z4" mat-stroked-button color="warn">Back</button>
+
+    <p class="full-width" >Developed by Julius Cavalcante</p>
+
+</div>
