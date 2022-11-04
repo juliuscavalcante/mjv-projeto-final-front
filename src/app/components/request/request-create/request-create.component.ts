@@ -48,7 +48,7 @@ export class RequestCreateComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.findAllMechanics();
+    this.findAllMechanic();
     this.findAllEngineer();
   }
 
@@ -61,7 +61,7 @@ export class RequestCreateComponent implements OnInit {
     })
   }
 
-  findAllMechanics(): void {
+  findAllMechanic(): void {
     this.mechanicService.findAll().subscribe(request => {
       this.mechanics = request;
     })

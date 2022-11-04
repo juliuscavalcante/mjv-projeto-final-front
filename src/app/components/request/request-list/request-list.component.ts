@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatTableDataSource } from "@angular/material/table";
-import { MatPaginator } from "@angular/material/paginator";
-import { RequestService } from "../../../service/request.service";
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Request } from "../../../model/request";
+import { RequestService } from "../../../service/request.service";
 
 @Component({
   selector: 'app-request-list',
@@ -14,7 +14,7 @@ export class RequestListComponent implements OnInit {
   ELEMENT_DATA: Request[] = []
   FILTERED_DATA: Request[] = []
 
-  displayedColumns: string[] = ['id', 'title', 'mechanic', 'engineer', 'openingDate', 'priority', 'status', 'actions'];
+  displayedColumns: string[] = ['id', 'title', 'openingDate', 'priority', 'status', 'actions'];
   dataSource = new MatTableDataSource<Request>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -24,8 +24,8 @@ export class RequestListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-  this.findAll();
-}
+    this.findAll();
+  }
 
   findAll(): void {
     this.service.findAll().subscribe(request => {
@@ -43,7 +43,7 @@ export class RequestListComponent implements OnInit {
   returnStatus(status: any): string {
     if (status == '0') {
       return 'OPEN'
-    } else if  (status == '1') {
+    } else if (status == '1') {
       return 'PROGRESS'
     } else {
       return 'CLOSED'
@@ -53,7 +53,7 @@ export class RequestListComponent implements OnInit {
   returnPriority(priority: any): string {
     if (priority == '0') {
       return 'LOW'
-    } else if  (priority == '1') {
+    } else if (priority == '1') {
       return 'MEDIUM'
     } else {
       return 'HIGH'
@@ -71,5 +71,3 @@ export class RequestListComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 }
-
-

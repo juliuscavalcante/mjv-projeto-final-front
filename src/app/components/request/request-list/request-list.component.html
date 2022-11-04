@@ -2,7 +2,7 @@
 
     <h1>Listing Requests</h1>
 
-    <button routerLink ="create" class="mat-elevation-z8" mat-stroked-button color="primary">New Request</button>
+    <button routerLink="create" class="mat-elevation-z8" mat-stroked-button color="primary">New Request</button>
 
     <mat-form-field appearance="standard">
         <mat-label>Filter</mat-label>
@@ -10,7 +10,7 @@
     </mat-form-field>
 
     <mat-radio-group color="primary">
-        <mat-radio-button (click)="orderByStatus(0)" value="0" >OPEN</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus(0)" value="0">OPEN</mat-radio-button>
         <mat-radio-button (click)="orderByStatus(1)" value="1">PROGRESS</mat-radio-button>
         <mat-radio-button (click)="orderByStatus(2)" value="2">CLOSED</mat-radio-button>
     </mat-radio-group>
@@ -27,16 +27,6 @@
             <ng-container matColumnDef="title">
                 <th mat-header-cell *matHeaderCellDef> Title </th>
                 <td mat-cell *matCellDef="let element"> {{element.title}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="mechanic">
-                <th mat-header-cell *matHeaderCellDef> Mechanic </th>
-                <td mat-cell *matCellDef="let element"> {{element.mechanicName}} </td>
-            </ng-container>
-
-            <ng-container matColumnDef="engineer">
-                <th mat-header-cell *matHeaderCellDef> Engineer </th>
-                <td mat-cell *matCellDef="let element"> {{element.engineerName}} </td>
             </ng-container>
 
             <ng-container matColumnDef="openingDate">
@@ -72,5 +62,4 @@
 
         <mat-paginator [pageSizeOptions]="[5, 2, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
     </div>
-
 </div>
