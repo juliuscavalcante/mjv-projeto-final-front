@@ -11,24 +11,42 @@
 
 h1, img, p {
     text-align: center;
+    color: #8f9192;
+
 }
 
 img {
     height: 15rem;
 }
 
+mat-label {
+    color: #8f9192;
+}
+
+input {
+    color: #8f9192;
+}
+
 .status-priority {
     display: flex;
     justify-content: space-between;
+    color: #8f9192;
 }
 
 .status-priority mat-form-field {
     width: 49%;
+    color: #8f9192;
 }
 
 .notes {
     min-height: 6rem;
     max-height: 10rem;
+    color: #8f9192;
+}
+
+::-webkit-input-placeholder {
+    color: #8f9192;
+    opacity: .6;
 }
 
 buttton {
@@ -36,6 +54,7 @@ buttton {
 }
 
 p {
-    margin-top: 3rem;
-    opacity: .3;
+    margin-top: 1rem;
+    opacity: .5;
+    color: #8f9192;
 }

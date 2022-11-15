@@ -12,6 +12,7 @@
 
 h1 , p {
     text-align: center;
+    color: #8f9192;
 }
 
 img {
@@ -25,6 +26,15 @@ img {
     justify-content: space-between;
 }
 
+mat-label {
+    color: #8f9192;
+}
+
+input:disabled {
+    color: #8f9192;
+}
+
+
 button {
     margin-top: .8rem;
 }
@@ -32,8 +42,10 @@ button {
 p {
     margin-top: 1rem;
     opacity: .5;
+    color: #8f9192;
 }
 
 mat-icon {
     opacity: .8;
+    color: #8f9192;
 }

@@ -11,11 +11,21 @@
 
 h1, img, p {
     text-align: center;
+    color: #8f9192;
 }
 
 img {
     height: 15rem;
 }
+
+mat-label {
+    color: #8f9192;
+}
+
+input:disabled {
+    color: #8f9192;
+}
+
 
 .status-priority {
     display: flex;
@@ -29,6 +39,7 @@ img {
 .notes {
     min-height: 6rem;
     max-height: 10rem;
+    color: #8f9192;
 }
 
 buttton {
