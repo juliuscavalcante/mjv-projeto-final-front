@@ -1,4 +1,3 @@
-
 .container {
     width: 90%;
     margin: 1rem;
@@ -6,46 +5,20 @@
 
 table {
     width: 100%;
-    background-color: #202324;
 }
 
 mat-form-field {
     width: 100%;
 }
 
+button {
+    width: 100%;
+}
 
 h1 {
     width: 100%;
     text-align: center;
     margin-bottom: 1rem;
-    color: #e2e2e3;
-}
-
-button {
-    width: 100%;
-    border-radius: .5rem;
-}
-
-.mat-elevation-z12 {
-    border: 0.1px solid #444850;
-}
-
-mat-label {
-    color: #8f9192;
-}
-
-::-webkit-input-placeholder {
-    color: #8f9192;
-    opacity: .6;
-}
-
-.mat-elevation-z8 th, td, tr {
-    color: #8f9192;
-}
-
- mat-paginator {
-    background-color: #202324;
-    color: #8f9192;
 }
 
 .edit {
