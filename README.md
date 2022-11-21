@@ -9,7 +9,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 https://mjv-racing.vercel.app/login
 
 <p>Usuário para acesso à aplicação:<br> 
-email: rita@email.com<br> 
+email: julius@email.com<br> 
 password: 123</p>
 
 # MjvRacingFront
